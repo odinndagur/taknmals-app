@@ -67,6 +67,7 @@ a:hover{
 }
 .isSelected {
   color: red;
+  margin-bottom:30px;
 }
 
 /* @media screen and (max-width: 600px) {

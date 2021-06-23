@@ -4,9 +4,10 @@
 <input v-model="search"/>
 </div>
 <br/>
-
-    <SignCard class="sign-card2" v-for="sign in currentArr" :key="sign.youtubeId" :sign="sign" @select="select(sign)" :selected="isSelected(sign)" :class="{selected: isSelected(sign)}"/> 
-<br/>
+<div v-for="sign in currentArr" :key="sign.youtubeId" :class="{selected: isSelected(sign)}">
+    <SignCard class="sign-card2" :sign="sign" @select="select(sign)" :selected="isSelected(sign)"/> 
+</div>
+<!-- <br/> -->
 <button @click="loadMore">Add more signs</button>
   </div>
 </template>
@@ -91,5 +92,8 @@ filteredList(){
 }
 .selected{
 /* margin:20px; */
+}
+
+div {
 }
 </style>
