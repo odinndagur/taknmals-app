@@ -4,7 +4,7 @@
 <input v-model="search"/>
 </div>
 <br/>
-<div v-for="sign in currentArr" :key="sign.youtubeId" :class="{selected: isSelected(sign)}">
+<div v-for="sign in filteredList" :key="sign.youtubeId" :class="{selected: isSelected(sign)}">
     <SignCard class="sign-card2" :sign="sign" @select="select(sign)" :selected="isSelected(sign)"/> 
 </div>
 <!-- <br/> -->
