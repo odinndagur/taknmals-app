@@ -64,8 +64,8 @@ export default {
   },
   computed: {
 filteredList(){
-  return this.takn.filter(takn => takn.phrase.toLowerCase().includes(this.search.toLowerCase();
-  })
+  return this.takn.filter(takn => takn.phrase.toLowerCase().includes(this.search.toLowerCase());
+  },
 },
   },
   mounted(){
