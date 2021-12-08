@@ -67,7 +67,6 @@ filteredList(){
   return this.takn.filter(takn => takn.phrase.toLowerCase().includes(this.search.toLowerCase());
   }
 },
-  },
   mounted(){
     this.getInitial();
     this.scroll();
