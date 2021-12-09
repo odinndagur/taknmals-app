@@ -1,6 +1,6 @@
 {
-    "name": "Myndir",
-    "short_name": "Myndir",
+    "name": "Táknmál",
+    "short_name": "Táknmál",
     "start_url": "index.html",
     "display": "standalone",
     "theme_color": "#14181c",
