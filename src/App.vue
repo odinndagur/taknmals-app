@@ -1,7 +1,7 @@
 <template>
   <div id="app">
 <div class="searchBox">
-<input v-model="search"/>
+<input class="search-box" v-model="search"/>
 </div>
 <br/>
 <div v-for="sign in currentArr" :key="sign.youtubeId" :class="{selected: isSelected(sign)}">
@@ -30,13 +30,13 @@ export default {
   },
   methods: {
     getInitial(){
-      for(let i = 0; i < 40; i++){
+      for(let i = 0; i < 150; i++){
         this.currentArr.push(this.takn[i]);
       }
     },
     loadMore(){
       let initial = this.currentArr.length;
-      for(let i = initial; i < initial + 10; i++){
+      for(let i = initial; i < initial + 50; i++){
         this.currentArr.push(this.takn[i]);
       }
     },
@@ -62,11 +62,17 @@ export default {
  }
 }
   },
-  /*computed: {
-filteredList(){
-  return this.takn.filter(takn => takn.phrase.toLowerCase().includes(this.search.toLowerCase());
-  }
-},*/
+  computed: {
+    // filteredList(){
+    //   if (this.takn[0].phrase){
+    //   return this.takn.filter(item=> item.phrase.toLowerCase().indexOf(this.search) != -1);
+    //   }
+    //   else return this.takn;
+    // }
+// filteredList(){
+//   return this.takn.filter(takn => takn.phrase.toLowerCase().includes(this.search.toLowerCase());
+//   }
+},
   mounted(){
     this.getInitial();
     this.scroll();
@@ -79,17 +85,29 @@ filteredList(){
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  text-align: left;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.search-box{
+  width:80%;
+  margin:0 10%;
 }
 .sign-card {
   display:inline-block;
   /* margin:auto; */
   width:30px;
+  padding:0 4rem;
 }
 .selected{
 /* margin:20px; */
+margin-top:1rem;
+padding-top:1rem;
+border-top: 2px solid gray;
+margin-bottom:1rem;
+padding-bottom:1rem;
+border-bottom:2px solid gray;
 }
 
 div {

@@ -66,8 +66,9 @@ a:hover{
   cursor: pointer;
 }
 .isSelected {
-  color: red;
-  margin-bottom:30px;
+  color: black;
+  font-style:oblique;
+  /* margin-bottom:30px; */
 }
 
 /* @media screen and (max-width: 600px) {
@@ -78,9 +79,10 @@ a:hover{
 } */
 
 .player {
-  width:80%;
+  width:100%;
   max-width: 450px;
   float:left;
   margin: auto;
+  margin-top:1rem;
 }
 </style>
