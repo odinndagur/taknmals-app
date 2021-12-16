@@ -4,8 +4,10 @@
 <input class="search-box" v-model="search"/>
 </div>
 <br/>
+<div class="signslist">
 <div v-for="sign in currentArr" :key="sign.youtubeId" :class="{selected: isSelected(sign)}">
     <SignCard class="sign-card2" :sign="sign" @select="select(sign)" :selected="isSelected(sign)"/> 
+</div>
 </div>
 <!-- <br/> -->
 <button @click="loadMore">Add more signs</button>
@@ -97,6 +99,12 @@ html, body {
 .search-box{
   width:80%;
   margin:0 10%;
+  position:absolute;
+}
+
+.signslist {
+  position:absolute;
+  top:30px;
 }
 .sign-card {
   display:inline-block;
