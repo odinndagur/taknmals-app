@@ -81,8 +81,9 @@ export default {
 </script>
 
 <style>
-body{
-  width:100vw;
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
