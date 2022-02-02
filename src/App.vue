@@ -111,7 +111,7 @@ html, body {
   display:inline-block;
   /* margin:auto; */
   width:30px;
-  padding:0 4rem;
+  padding:0.5rem 4rem;
   background:white;
   border-radius:20%;
 }
