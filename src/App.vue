@@ -106,9 +106,9 @@ html, body {
 }
 
 .signslist {
-  height:80%;
+  height:80vh;
   overflow-y:auto;
-  top:30px;
+  top:15vh;
 }
 .sign-card {
   display:inline-block;
