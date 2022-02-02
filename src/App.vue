@@ -101,6 +101,7 @@ html, body {
   width:80%;
   margin:0 10%;
   position:absolute;
+  top:0;
 }
 
 .signslist {
