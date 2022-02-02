@@ -92,22 +92,23 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
   color: #2c3e50;
+  margin-top:60px;
   height:100vw;
   width:100vw;
 }
 
 .search-box{
   width:80%;
-  margin:0 10%;
+  margin:auto;
 }
 .searchBox{
   padding: 10px 0px;
+  height:10vw;
 }
 
 .signslist {
   height:80vh;
   overflow-y:auto;
-  top:15vh;
 }
 .sign-card {
   display:inline-block;
