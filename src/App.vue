@@ -1,16 +1,15 @@
 <template>
   <div id="app">
-<div class="searchBox">
-<input class="search-box" v-model="search"/>
-</div>
-<br/>
-<div class="signslist">
-<div v-for="sign in currentArr" :key="sign.youtubeId" :class="{selected: isSelected(sign)}">
-    <SignCard class="sign-card2" :sign="sign" @select="select(sign)" :selected="isSelected(sign)"/> 
-</div>
-</div>
-<!-- <br/> -->
-<button @click="loadMore">Add more signs</button>
+    <div class="searchBox">
+      <input class="search-box" v-model="search"/>
+    </div>
+    <br/>
+    <div class="signslist">
+      <div v-for="sign in currentArr" :key="sign.youtubeId" :class="{selected: isSelected(sign)}">
+          <SignCard class="sign-card" :sign="sign" @select="select(sign)" :selected="isSelected(sign)"/> 
+      </div>
+    </div>
+    <button @click="loadMore">Add more signs</button>
   </div>
 </template>
 
@@ -94,6 +93,8 @@ html, body {
   text-align: left;
   color: #2c3e50;
   margin-top: 60px;
+  height:100vw;
+  width:100vw;
 }
 
 .search-box{
