@@ -101,8 +101,6 @@ html, body {
   margin:0 10%;
 }
 .searchBox{
-  position: sticky;
-  top: 0px;
   padding: 10px 0px;
 }
 
