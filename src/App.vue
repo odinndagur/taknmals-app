@@ -116,10 +116,10 @@ html, body {
   /* margin:auto; */
   width:30px;
   padding:0 4rem;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
   background:white;
-  border-radius:10%;
+  border-radius:3%;
 }
 .selected{
 /* margin:20px; */
