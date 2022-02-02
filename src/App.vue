@@ -108,7 +108,8 @@ html, body {
 }
 
 .signslist {
-  position:absolute;
+  height:80%;
+  overflow-y:auto;
   top:30px;
 }
 .sign-card {
