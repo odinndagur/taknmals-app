@@ -86,7 +86,6 @@ export default {
 html, body {
     max-width: 100%;
     overflow-x: hidden;
-    background: lightgray;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -119,7 +118,8 @@ html, body {
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;
   background:white;
-  border-radius:3%;
+  border-radius:1%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 .selected{
 /* margin:20px; */
