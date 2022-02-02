@@ -102,6 +102,7 @@ html, body {
   margin:auto 10%;
 }
 .searchBox{
+  margin:auto auto;
   padding: 10px 0px;
   height:10vw;
 }
