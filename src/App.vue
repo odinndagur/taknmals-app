@@ -100,8 +100,10 @@ html, body {
 .search-box{
   width:80%;
   margin:0 10%;
+}
+.searchBox{
   position:absolute;
-  top:0;
+  top:10px;
 }
 
 .signslist {
@@ -112,9 +114,11 @@ html, body {
   display:inline-block;
   /* margin:auto; */
   width:30px;
-  padding:0.5rem 4rem;
+  padding:0 4rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   background:white;
-  border-radius:20%;
+  border-radius:10%;
 }
 .selected{
 /* margin:20px; */
