@@ -92,7 +92,6 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
   color: #2c3e50;
-  margin-top: 60px;
   height:100vw;
   width:100vw;
 }
