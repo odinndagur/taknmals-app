@@ -99,7 +99,7 @@ html, body {
 
 .search-box{
   width:80%;
-  margin:auto;
+  margin:auto 10%;
 }
 .searchBox{
   padding: 10px 0px;
