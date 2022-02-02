@@ -86,6 +86,7 @@ export default {
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    background: lightgray;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -111,6 +112,8 @@ html, body {
   /* margin:auto; */
   width:30px;
   padding:0 4rem;
+  background:white;
+  border-radius:20%;
 }
 .selected{
 /* margin:20px; */
