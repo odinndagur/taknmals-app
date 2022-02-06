@@ -2,6 +2,9 @@
   <div id="app">
     <div class="searchBox">
       <input class="search-box" v-model="search"/>
+      <div class="btncenter">
+        <button @click="loadMore">Add more signs</button>
+        </div>
     </div>
     <br/>
     <div class="signslist">
@@ -9,7 +12,6 @@
           <SignCard class="sign-card" :sign="sign" @select="select(sign)" :selected="isSelected(sign)"/> 
       </div>
     </div>
-    <button @click="loadMore">Add more signs</button>
   </div>
 </template>
 
@@ -84,8 +86,11 @@ export default {
 <style>
 html, body {
     max-width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
+    height:100%;
+    margin:0;
 }
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -93,7 +98,7 @@ html, body {
   text-align: left;
   color: #2c3e50;
   margin-top:60px;
-  height:100vw;
+  height:100vh;
   width:100vw;
 }
 
@@ -103,13 +108,21 @@ html, body {
 }
 .searchBox{
   margin:auto auto;
-  padding: 10px 0px;
-  height:10vw;
+  /* padding: 10px 0px; */
+  position:sticky;
+  top:0;
+}
+
+.btncenter{
+margin:10px auto;
+width:fit-content;
 }
 
 .signslist {
-  height:80vh;
+  height:100%;
   overflow-y:auto;
+  width:80%;
+  margin:auto;
 }
 .sign-card {
   display:inline-block;
