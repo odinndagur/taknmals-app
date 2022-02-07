@@ -29,7 +29,9 @@ export default {
   data: () => {
     return {
       takn: taknjson,
-      currentArr: [],
+      currentArr: [
+        {'phrase': ''}
+      ],
       filteredArr: [],
       selected: {},
       search:'',
