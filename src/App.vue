@@ -1,14 +1,17 @@
 <template>
   <div id="app">
     <div class="searchBox">
-      <input class="search-box" v-model="search"/>
+      <input class="search-box" @keydown="updateSearch" v-model="search"/>
       <div class="btncenter">
         <button @click="loadMore">Add more signs</button>
         </div>
+      <div class="btncenter">
+        <button @click="getAll">Get all signs</button>
+      </div>
     </div>
     <br/>
     <div class="signslist">
-      <div v-for="sign in currentArr" :key="sign.youtubeId" :class="{selected: isSelected(sign)}">
+      <div v-for="sign in filteredList" :key="sign.youtubeId" :class="{selected: isSelected(sign)}">
           <SignCard class="sign-card" :sign="sign" @select="select(sign)" :selected="isSelected(sign)"/> 
       </div>
     </div>
@@ -27,6 +30,7 @@ export default {
     return {
       takn: taknjson,
       currentArr: [],
+      filteredArr: [],
       selected: {},
       search:'',
     };
@@ -36,10 +40,17 @@ export default {
       for(let i = 0; i < 150; i++){
         this.currentArr.push(this.takn[i]);
       }
+      this.filteredArr = this.currentArr;
     },
     loadMore(){
       let initial = this.currentArr.length;
       for(let i = initial; i < initial + 50; i++){
+        this.currentArr.push(this.takn[i]);
+      }
+    },
+    getAll(){
+      let initial = this.currentArr.length;
+      for(let i = initial; i < this.takn.length; i++){
         this.currentArr.push(this.takn[i]);
       }
     },
@@ -55,6 +66,13 @@ export default {
     isSelected(sign){
       return this.selected == sign;
     },
+    updateSearch(){
+      this.filteredArr = this.currentArr.filter(item=>{
+        console.log(item['phrase'])
+        item['phrase'].indexOf(this.search) != -1;
+})
+      console.log("lol")
+    },
     scroll () {
   window.onscroll = () => {
     let bottomOfWindow = Math.max(window.pageYOffset, document.documentElement.scrollTop, document.body.scrollTop) + window.innerHeight === document.documentElement.offsetHeight
@@ -66,6 +84,16 @@ export default {
 }
   },
   computed: {
+        filteredList() {
+          if(this.takn != null){
+              if(this.search != ''){
+              return this.currentArr.filter(sign => {
+                return sign['phrase'].toLowerCase().includes(this.search.toLowerCase())
+              })
+            }
+          }
+            return this.currentArr;
+        },
     // filteredList(){
     //   if (this.takn[0].phrase){
     //   return this.takn.filter(item=> item.phrase.toLowerCase().indexOf(this.search) != -1);
