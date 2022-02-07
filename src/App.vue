@@ -51,9 +51,8 @@ export default {
       }
     },
     getAll(){
-      let initial = this.currentArr.length;
-      for(let i = initial; i < this.takn.length; i++){
-        this.currentArr.push(this.takn[i]);
+      while(this.currentArr.length < this.takn.length-50){
+        this.loadMore();
       }
     },
     select(sign){
