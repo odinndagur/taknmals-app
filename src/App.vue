@@ -30,7 +30,10 @@ export default {
     return {
       takn: taknjson,
       currentArr: [
-        {'phrase': ''}
+        {'phrase': '',
+        'youtubeId': '',
+
+        }
       ],
       filteredArr: [],
       selected: {},
@@ -39,10 +42,10 @@ export default {
   },
   methods: {
     getInitial(){
-      for(let i = 0; i < 150; i++){
+      for(let i = 0; i < 10000; i++){
         this.currentArr.push(this.takn[i]);
       }
-      this.filteredArr = this.currentArr;
+      //this.filteredArr = this.currentArr;
     },
     loadMore(){
       let initial = this.currentArr.length;
