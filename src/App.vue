@@ -42,7 +42,7 @@ export default {
   },
   methods: {
     getInitial(){
-      for(let i = 0; i < 10000; i++){
+      for(let i = 0; i < 150; i++){
         this.currentArr.push(this.takn[i]);
       }
       //this.filteredArr = this.currentArr;
