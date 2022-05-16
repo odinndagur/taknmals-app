@@ -71,7 +71,7 @@ export default {
       return this.selected == sign;
     },
     updateSearch(){
-      this.filteredArr = this.takn.filter(item=>{
+      this.filteredArr = this.currentArr.filter(item=>{
         console.log(item['phrase'])
         item['phrase'].indexOf(this.search) != -1;
 })
