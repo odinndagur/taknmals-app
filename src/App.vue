@@ -2,12 +2,12 @@
   <div id="app">
     <div class="searchBox">
       <input class="search-box" @keydown="updateSearch" v-model="search"/>
-      <div class="btncenter">
+      <!-- <div class="btncenter">
         <button @click="loadMore">Add more signs</button>
         </div>
       <div class="btncenter">
         <button @click="getAll">Get all signs</button>
-      </div>
+      </div> -->
     </div>
     <br/>
     <div class="signslist">
