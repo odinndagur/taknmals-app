@@ -154,7 +154,7 @@ width:fit-content;
   height:100%;
   overflow-y:auto;
   overflow-x: hidden;
-  width:80%;
+  max-width:80%;
   margin:auto;
 }
 .sign-card {
@@ -176,8 +176,5 @@ border-top: 2px solid gray;
 margin-bottom:1rem;
 padding-bottom:1rem;
 border-bottom:2px solid gray;
-}
-
-div {
 }
 </style>
