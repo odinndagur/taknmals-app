@@ -153,6 +153,7 @@ width:fit-content;
 .signslist {
   height:100%;
   overflow-y:auto;
+  overflow-x: hidden;
   width:80%;
   margin:auto;
 }
