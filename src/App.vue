@@ -11,7 +11,7 @@
     </div>
     <br/>
     <div class="signslist">
-      <div v-for="sign in filteredList" :key="sign.youtubeId" :class="{selected: isSelected(sign)}">
+      <div v-for="sign in signs" :key="sign.youtubeId" :class="{selected: isSelected(sign)}">
           <SignCard class="sign-card" :sign="sign" @select="select(sign)" :selected="isSelected(sign)"/> 
       </div>
     </div>
@@ -29,6 +29,7 @@ export default {
   data: () => {
     return {
       takn: taknjson,
+      signs: [],
       currentArr: [
         {'phrase': '',
         'youtubeId': '',
@@ -111,6 +112,10 @@ export default {
   mounted(){
     this.getInitial();
     this.scroll();
+  },
+  async created(){
+    const signs = await axios.get('/assets/takn.json');
+    this.signs = Component.freeze(signs);
   }
 };
 </script>
