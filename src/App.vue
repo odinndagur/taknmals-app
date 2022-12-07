@@ -111,7 +111,8 @@ export default {
 },
   mounted(){
     this.getInitial();
-    this.scroll();
+    this.getAll();
+    //this.scroll();
   },
   async created(){
     const signs = await axios.get('/assets/takn.json');
